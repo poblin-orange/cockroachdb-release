@@ -2,6 +2,16 @@
 
 BOSH release of CockroachDB, a distributed SQL database built on a transactional and strongly-consistent key-value store
 
+Build Tag:    v1.0
+Build Time:   2017/05/10 13:19:57
+Distribution: CCL
+Platform:     linux amd64
+Go Version:   go1.8.1
+C Compiler:   gcc 6.3.0
+Build SHA-1:  43aa1ed04cd817348921ac27e11e25725f634aa6
+Build Type:   release
+
+
 ## Quick Start for [BOSH Lite](https://github.com/cloudfoundry/bosh-lite)
 
 1. Target your BOSH Lite director with your BOSH CLI.
