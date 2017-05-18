@@ -1,0 +1,7 @@
+---
+name: cockroachdb
+
+dependencies: []
+
+files:
+- cockroachdb/**/*

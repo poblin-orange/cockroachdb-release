@@ -1,0 +1,13 @@
+# abort script on any command that exits with a non zero value
+set -eux
+#set -ux
+
+export TMPDIR=/var/vcap/data/tmp
+mkdir -p $TMPDIR
+
+pushd cockroachdb
+  tar xvf cockroach-latest.linux-amd64.tgz 
+  mkdir -p $BOSH_INSTALL_TARGET/bin
+  cp cockroach-latest.linux-amd64.cockroach/cockroach $BOSH_INSTALL_TARGET/bin/
+  mv $GOPATH/src/github.com/cockroachdb/cockroach/cockroach $BOSH_INSTALL_TARGET/bin/
+popd

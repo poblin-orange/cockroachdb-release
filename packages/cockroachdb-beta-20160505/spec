@@ -1,8 +1,0 @@
----
-name: cockroachdb-beta-20160505
-
-dependencies:
-- golang1.6
-
-files:
-- cockroach-beta-20160505/**/*
