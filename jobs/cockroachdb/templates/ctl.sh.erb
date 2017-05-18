@@ -14,9 +14,9 @@ case $1 in
     # FIXME: the following line starts differently if you're NOT the first cockroach
     <% bootstrap_address = link("cockroach").instances.find(&:bootstrap).address  %>
 <% if spec.address == bootstrap_address %>
-  <%=    "exec /var/vcap/packages/cockroachdb-beta-20160505/bin/cockroach start --insecure --log-dir $LOG_DIR --host=#{bootstrap_address}" %>
+  <%=    "exec /var/vcap/packages/cockroachdb/bin/cockroach-latest.linux-amd64/cockroach start --insecure --log-dir $LOG_DIR --host=#{bootstrap_address}" %>
 <% else %>
-  <%=    "exec /var/vcap/packages/cockroachdb-beta-20160505/bin/cockroach start --insecure --log-dir $LOG_DIR --host=#{spec.address} --join=#{bootstrap_address}:26257" %>
+  <%=    "exec /var/vcap/packages/cockroachdb/bin/cockroach-latest.linux-amd64/cockroach start --insecure --log-dir $LOG_DIR --host=#{spec.address} --join=#{bootstrap_address}:26257" %>
 <% end %>
     ;;
 
